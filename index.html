@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For Sokina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+
+  <main class="card">
+    <button class="back hidden" id="back" aria-label="Back">← Back</button>
+    <!-- Welcome -->
+    <section class="page active" id="p0">
+      <div class="emoji">💌</div>
+      <h1>Hello, beautiful</h1>
+      <p>Something sweet is waiting for you at the end of this little journey. Take my hand and follow the steps, one at a time.</p>
+      <button class="btn next">Begin 💗</button>
+    </section>
+
+    <!-- Verification 1 -->
+    <section class="page" id="p1">
+      <div class="emoji">🕵️‍♀️</div>
+      <h2>But first...</h2>
+      <p>Let's make sure this is actually <b>Sokina</b>. Janson is not interested in any other girls, so stay away if you are not Sokina.</p>
+      <label for="q1">What is Sokina's favourite Starbucks drink?</label>
+      <input id="q1" type="text" placeholder="Type your answer..." autocomplete="off">
+      <button class="btn" id="check1">Check</button>
+      <p class="msg" id="m1"></p>
+      <button class="btn next hidden" id="n1">Next 💗</button>
+    </section>
+
+    <!-- Verification 2 -->
+    <section class="page" id="p2">
+      <div class="emoji">📍</div>
+      <h2>Two more questions</h2>
+      <label for="q2">Where did we go on our first meet?</label>
+      <select id="q2"></select>
+      <button class="btn" id="check2">Check</button>
+      <p class="msg" id="m2"></p>
+
+      <div id="lighthouse" class="hidden">
+        <label for="q3">What special happened during our trip to Lachine Lighthouse?</label>
+        <input id="q3" type="text" placeholder="Type your answer..." autocomplete="off">
+        <button class="btn" id="check3">Check</button>
+        <p class="msg" id="m3"></p>
+      </div>
+      <button class="btn next hidden" id="n2">Next 💗</button>
+    </section>
+
+    <!-- Verification 3 -->
+    <section class="page" id="p3">
+      <div class="emoji">📸</div>
+      <h2>Last one!</h2>
+      <img id="tripImg" src="images/trip.jpg" alt="Our trip">
+      <label for="q4">What was the destination of this trip?</label>
+      <input id="q4" type="text" placeholder="Type your answer..." autocomplete="off">
+      <button class="btn" id="check4">Check</button>
+      <p class="msg" id="m4"></p>
+      <button class="btn next hidden" id="n3">Next 💗</button>
+    </section>
+
+    <!-- Verified -->
+    <section class="page" id="p4">
+      <div class="emoji">✅</div>
+      <h2>It's really you!</h2>
+      <p>Verified. Welcome, Sokina. You can relax now, the hard part is over.</p>
+      <button class="btn next">Next 💗</button>
+    </section>
+    <section class="page" id="p5">
+      <div class="emoji">🤔</div>
+      <h2>Quick question</h2>
+      <p>Do you like Janson?</p>
+      <div class="row2">
+        <button class="btn" id="likeYes">Yes</button>
+        <button class="btn alt" id="likeNo">No</button>
+        <button class="btn alt" id="likeIktu">Iktu</button>
+      </div>
+      <p class="msg" id="m5"></p>
+      <button class="btn next hidden" id="n5">Next 💗</button>
+    </section>
+    <section class="page" id="p7">
+      <div class="emoji">🌸</div>
+      <h2>Sokina...</h2>
+      <p>You make my days softer, my coffee sweeter, and every sunset a little more special.</p>
+      <button class="btn next">Next 💗</button>
+    </section>
+
+    <section class="page" id="p6">
+      <div class="emoji">💭</div>
+      <h2>Why do you like Shadman?</h2>
+      <p><i>Don't worry, I won't ask you for a list like you do.</i></p>
+      <textarea id="q6" rows="4" placeholder="Tell me anything..."></textarea>
+      <button class="btn" id="done6">Done</button>
+      <p class="msg" id="m6"></p>
+      <button class="btn next hidden" id="n6">Next 💗</button>
+    </section>
+
+    <section class="page" id="p8">
+      <div class="emoji">🥹</div>
+      <h2>I have something to ask</h2>
+      <p>From St. Joseph's Oratory to Lachine to Mont Tremblant, every moment with you is my favourite one.</p>
+      <button class="btn next">Next 💗</button>
+    </section>
+
+    <section class="page" id="p9">
+      <div class="emoji">💖</div>
+      <h2>Sokina, will you go out with me?</h2>
+      <div class="row">
+        <button class="btn" id="yes">Yes 💕</button>
+        <button class="btn alt" id="no">No</button>
+      </div>
+    </section>
+
+    <section class="page" id="p10">
+      <div class="emoji">🎉</div>
+      <h2>She said yes!</h2>
+      <p>You just made me the happiest guy in the world. I love you, Sokina. 💗<br>— Janson</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
