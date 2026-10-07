@@ -3,32 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>For Sokina</title>
+  <title>For Mokarrama</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="hearts" id="hearts"></div>
+  <div class="celebration-popups" id="celebrationPopups" aria-hidden="true"></div>
 
   <main class="card">
-    <button class="back hidden" id="back" aria-label="Back">← Back</button>
+    <button class="back hidden" id="back" aria-label="Go to previous page"><span class="back-icon" aria-hidden="true">‹</span><span>Previous</span></button>
     <!-- Welcome -->
     <section class="page active" id="p0">
       <div class="emoji">💌</div>
-      <h1>Hello, beautiful</h1>
-      <p>Something sweet is waiting for you at the end of this little journey. Take my hand and follow the steps, one at a time.</p>
-      <button class="btn next">Begin 💗</button>
+      <h1>Hello Moka,</h1>
+      <p>I know you have been very non chalan about this but I did NOT forget to properly ask you out so here we go.</p>
+      <button class="btn next">Begin</button>
     </section>
 
     <!-- Verification 1 -->
     <section class="page" id="p1">
       <div class="emoji">🕵️‍♀️</div>
       <h2>But first...</h2>
-      <p>Let's make sure this is actually <b>Sokina</b>. Janson is not interested in any other girls, so stay away if you are not Sokina.</p>
-      <label for="q1">What is Sokina's favourite Starbucks drink?</label>
+      <p>Let's make sure this is actually <b>Mokarrama</b>. Shadman is not interested in any other girls, so stay away if you are not Mokarrama.</p>
+      <label for="q1">What is Mokarrama's favourite Starbucks drink?</label>
       <input id="q1" type="text" placeholder="Type your answer..." autocomplete="off">
       <button class="btn" id="check1">Check</button>
       <p class="msg" id="m1"></p>
-      <button class="btn next hidden" id="n1">Next 💗</button>
+      <img class="meme hidden" id="r1" alt="Reaction meme">
+      <button class="btn next hidden" id="n1">Next</button>
     </section>
 
     <!-- Verification 2 -->
@@ -39,84 +41,125 @@
       <select id="q2"></select>
       <button class="btn" id="check2">Check</button>
       <p class="msg" id="m2"></p>
+      <img class="meme hidden" id="r2" alt="Reaction meme">
 
       <div id="lighthouse" class="hidden">
         <label for="q3">What special happened during our trip to Lachine Lighthouse?</label>
         <input id="q3" type="text" placeholder="Type your answer..." autocomplete="off">
         <button class="btn" id="check3">Check</button>
         <p class="msg" id="m3"></p>
+        <img class="meme hidden" id="r3" alt="Reaction meme">
       </div>
-      <button class="btn next hidden" id="n2">Next 💗</button>
+      <button class="btn next hidden" id="n2">Next</button>
     </section>
 
     <!-- Verification 3 -->
     <section class="page" id="p3">
       <div class="emoji">📸</div>
       <h2>Last one!</h2>
-      <img id="tripImg" src="images/trip.jpg" alt="Our trip">
+      <img id="tripImg" src="images/memes/trip.jpg" alt="Our trip">
       <label for="q4">What was the destination of this trip?</label>
       <input id="q4" type="text" placeholder="Type your answer..." autocomplete="off">
       <button class="btn" id="check4">Check</button>
       <p class="msg" id="m4"></p>
-      <button class="btn next hidden" id="n3">Next 💗</button>
+      <img class="meme hidden" id="r4" alt="Reaction meme">
+      <button class="btn next hidden" id="n3">Next</button>
     </section>
 
     <!-- Verified -->
     <section class="page" id="p4">
       <div class="emoji">✅</div>
       <h2>It's really you!</h2>
-      <p>Verified. Welcome, Sokina. You can relax now, the hard part is over.</p>
-      <button class="btn next">Next 💗</button>
+      <p>Verified. Welcome, Mokarrama. Ar kono shondeho nai ebar continue koroo</p>
+      <button class="btn next">Next</button>
     </section>
     <section class="page" id="p5">
       <div class="emoji">🤔</div>
       <h2>Quick question</h2>
-      <p>Do you like Janson?</p>
+      <p>Do you like Shadman?</p>
       <div class="row2">
         <button class="btn" id="likeYes">Yes</button>
         <button class="btn alt" id="likeNo">No</button>
         <button class="btn alt" id="likeIktu">Iktu</button>
       </div>
       <p class="msg" id="m5"></p>
-      <button class="btn next hidden" id="n5">Next 💗</button>
+      <img class="meme hidden" id="r5" alt="Reaction meme">
+      <button class="btn next hidden" id="n5">Next</button>
     </section>
-    <section class="page" id="p7">
-      <div class="emoji">🌸</div>
-      <h2>Sokina...</h2>
-      <p>You make my days softer, my coffee sweeter, and every sunset a little more special.</p>
-      <button class="btn next">Next 💗</button>
-    </section>
-
     <section class="page" id="p6">
-      <div class="emoji">💭</div>
-      <h2>Why do you like Shadman?</h2>
-      <p><i>Don't worry, I won't ask you for a list like you do.</i></p>
-      <textarea id="q6" rows="4" placeholder="Tell me anything..."></textarea>
-      <button class="btn" id="done6">Done</button>
-      <p class="msg" id="m6"></p>
-      <button class="btn next hidden" id="n6">Next 💗</button>
+      <div class="emoji">🪱</div>
+      <h2>Would you still love me if I was a worm?</h2>
+      <div class="row2">
+        <button class="btn alt" id="wormNo">No</button>
+        <button class="btn" id="wormHeck">The heck</button>
+      </div>
+      <p class="msg" id="wormMessage"></p>
+      <img class="meme hidden" id="wormMeme" alt="Reaction meme">
+      <button class="btn next hidden" id="wormNext">Next</button>
     </section>
 
-    <section class="page" id="p8">
-      <div class="emoji">🥹</div>
-      <h2>I have something to ask</h2>
-      <p>From St. Joseph's Oratory to Lachine to Mont Tremblant, every moment with you is my favourite one.</p>
-      <button class="btn next">Next 💗</button>
+    <section class="page" id="p7">
+      <div class="emoji">😊</div>
+      <h2>Do I make you smile and make you happy?</h2>
+      <div class="row">
+        <button class="btn" id="moodYes">Yes</button>
+        <button class="btn alt" id="moodNo">No</button>
+      </div>
+      <p class="msg" id="moodMessage"></p>
+      <img class="meme hidden" id="moodMeme" alt="Reaction meme">
+      <button class="btn next hidden" id="moodNext">Next</button>
     </section>
 
     <section class="page" id="p9">
-      <div class="emoji">💖</div>
-      <h2>Sokina, will you go out with me?</h2>
-      <div class="row">
-        <button class="btn" id="yes">Yes 💕</button>
-        <button class="btn alt" id="no">No</button>
+      <div class="emoji">🌸</div>
+      <h2>Mokarrama...</h2>
+      <div class="appreciation">
+        <p>I like you because you are mature, loyal, little clingy in a good way obviously, trustworthy</p>
+        <p>You have pretty eyes and your voice is yum</p>
+        <p>You are cute af, hot, shundor and nice fashion sense</p>
+        <p>You pray salah, you are smart, career focused and you are close with your parents and respect them</p>
+        <p>You are lowkey kinda chill unlike a Barishailla, aura ase bhaloi, fun, self obsessed, love cats and have 10/10 humor/meme sense and you not into some weird stuff</p>
+        <p>Keep up with this personality and please don't stressout too much about stuff</p>
+        <p>You are really valued and you mean a lot baby</p>
       </div>
+      <button class="btn next">Next</button>
+    </section>
+
+    <section class="page" id="p8">
+      <div class="emoji">💭</div>
+      <h2>Why do you like Shadman?</h2>
+      <p><i>Don't worry, I won't ask you for a list like you do.</i></p>
+      <label for="q6">Your answer</label>
+      <textarea id="q6" rows="4" placeholder="Tell me anything..."></textarea>
+      <button class="btn" id="done6">Done</button>
+      <p class="msg" id="m6"></p>
+      <img class="meme hidden" id="r6" alt="Reaction meme">
+      <button class="btn next hidden" id="n6">Next</button>
     </section>
 
     <section class="page" id="p10">
+      <div class="emoji">🥹</div>
+      <h2>I have something to ask</h2>
+      <p>For real now, no games..</p>
+      <button class="btn next">Next</button>
+    </section>
+
+    <section class="page" id="p11">
+      <div class="emoji">💖</div>
+      <img class="askout-photo" src="images/memes/askout.jpeg" alt="Mokarrama's surprise">
+      <h2>Will you be mine?</h2>
+      <div class="row">
+        <button class="btn" id="mineHeck">Heck yes 💕</button>
+        <button class="btn" id="mineAbsolutely">Absolutely 💖</button>
+      </div>
+    </section>
+
+    <section class="page" id="p12">
       <div class="emoji">🎉</div>
       <h2>She said yes!</h2>
-      <p>You just made me the happiest guy in the world. I love you, Sokina. 💗<br>— Janson</p>
+      <img class="meme hidden" id="r7" alt="Celebration meme">
+      <p>Not like ar kono option chilo but I'm sure thakleo na bolta na amar moton manush ke hehe</p>
+      <p>But in all seriousness, I meant to do this for a while and I'm very happy you chose me as your man and wanted us together. I love you Neha. 💗<br>— Shadman</p>
     </section>
   </main>
 
